@@ -30,9 +30,7 @@ route.post('/signup',[
       );
     }
 
-    if (is) {
-      
-    }
+  
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
