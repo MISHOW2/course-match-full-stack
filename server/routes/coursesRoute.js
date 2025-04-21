@@ -12,7 +12,7 @@ route.post('/getmarks', (req, res) => {
   const { subjects } = req.body;
 
   if (!subjects || !Array.isArray(subjects) || subjects.length < 6) {
-    return res.status(400).json({ message: "Please provide at least 6 subjects." });
+    return res.json({success:false , msg:"please provide at least 6 subjects "})
   }
 
   // Convert marks to APS points
