@@ -1,6 +1,4 @@
 const { check, validationResult } = require('express-validator');
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 // Use your local in-memory users database
 const users = require('../config/db.js');

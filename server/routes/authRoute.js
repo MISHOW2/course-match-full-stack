@@ -10,23 +10,7 @@ route.get('/google', (req, res) => {
   res.send('<a href="/api/auth/google">Login with Google</a>');
 });
 
-// Start Google OAuth flow
-route.get('/auth/google',
-  passport.authenticate('google', { scope: ['email', 'profile'] })
-);
 
-// Handle Google callback
-route.get('/google/callback',
-  passport.authenticate('google', {
-    successRedirect: '/api/protected',
-    failureRedirect: '/api/auth/failure'
-  })
-);
-
-// Auth failure
-route.get('/auth/failure', (req, res) => {
-  res.send('<h1>Failed to authenticate</h1>');
-});
 
 // Local signup
 route.post('/signup', validateCredentials, signUp);

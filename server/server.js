@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 // Import and use routes
 app.use('/api', require('./routes/authRoute.js')); 
-
+app.use('/courses', require('./routes/coursesRoute.js'))
 app.listen(5000, () => {
   console.log("Listening on PORT 5000");
 });
