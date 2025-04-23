@@ -1,0 +1,31 @@
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo img{
+  width: 100px;
+}
+
+.middleNav ul{
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+.middleNav li{
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.login button{
+  width: 96px;
+  height: 38px;
+ background-color: #0095FF;
+ color: white;
+ border: none;
+ cursor: pointer;
+ font-size: 14px;
+}
