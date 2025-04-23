@@ -109,8 +109,33 @@ const getCourseByName =(req, res) => {
   res.json({ success: true, matchedCourses });
 }
 
+
+const getSingleCourse = (req,res)=>{
+  const {courseName} = req.body;
+
+
+  const singleCourse = universities.forEach(uni=>{
+    const matchedCourses = [];
+    uni.courses.forEach(course =>{
+      if (
+        courseName &&
+        course.name.toLowerCase().includes(courseName.trim().toLowerCase())
+      ){
+         matchedCourses.push({
+          university: uni.name,
+          location: uni.location,
+          
+        });
+        if (matchedCourses.length===0) {
+          res.json({ success: false, msg:"no course with that name found" });
+        }
+      }
+    })
+  })
+}
 module.exports = {
   getCourses,
   getCoursesByAps,
-  getCourseByName
+  getCourseByName,
+  getSingleCourse
 }
