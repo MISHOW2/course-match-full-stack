@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 const users = require('./config/db.js')
+const cors = require('cors')
+
 // Middleware to parse JSON
+app.use(cors())
 app.use(express.json());
 
 

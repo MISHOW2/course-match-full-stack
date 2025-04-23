@@ -2,7 +2,7 @@ const users = [
   {
     id: 1,
     email: "mixo@gmail.com",
-    password: "123456" // Plain text for now, but you can hash later
+    password: "123456"
   },
   {
     id: 2,
@@ -11,52 +11,104 @@ const users = [
   }
 ];
 
-const courses = [
+const universities = [
   {
-    id: 1,
-    name: "Nursing",
-    minAps: 26,
-    field: "Health Sciences",
-    university: "University of Limpopo"
+    name: "University of Limpopo",
+    location: "Polokwane, Limpopo",
+    courses: [
+      {
+        id: 1,
+        name: "Nursing",
+        minAps: 26,
+        faculty: "Health Sciences",
+        type: "Bachelor's Degree",
+        duration: "4 years"
+      }
+    ]
   },
   {
-    id: 2,
-    name: "Information Technology",
-    minAps: 28,
-    field: "Computer Science",
-    university: "TUT"
+    name: "TUT",
+    location: "Pretoria, Gauteng",
+    courses: [
+      {
+        id: 2,
+        name: "Information Technology",
+        minAps: 28,
+        faculty: "Computer Science",
+        type: "Diploma",
+        duration: "3 years"
+      }
+    ]
   },
   {
-    id: 3,
-    name: "Education",
-    minAps: 22,
-    field: "Teaching",
-    university: "University of South Africa"
+    name: "University of South Africa",
+    location: "Distance Learning",
+    courses: [
+      {
+        id: 3,
+        name: "Education",
+        minAps: 22,
+        faculty: "Education",
+        type: "Bachelor of Education",
+        duration: "4 years"
+      }
+    ]
   },
   {
-    id: 4,
-    name: "Mechanical Engineering",
-    minAps: 30,
-    field: "Engineering",
-    university: "VUT"
+    name: "VUT",
+    location: "Vanderbijlpark, Gauteng",
+    courses: [
+      {
+        id: 4,
+        name: "Mechanical Engineering",
+        minAps: 30,
+        faculty: "Engineering",
+        type: "Bachelor's Degree",
+        duration: "4 years"
+      }
+    ]
   },
   {
-    id: 5,
-    name: "Business Management",
-    minAps: 24,
-    field: "Commerce",
-    university: "UJ"
+    name: "UJ",
+    location: "Johannesburg, Gauteng",
+    courses: [
+      {
+        id: 5,
+        name: "Business Management",
+        minAps: 24,
+        faculty: "Commerce",
+        type: "Diploma",
+        duration: "3 years"
+      }
+    ]
   },
   {
-    id: 6,
-    name: "Psychology",
-    minAps: 27,
-    field: "Social Sciences",
-    university: "Wits"
+    name: "Wits",
+    location: "Johannesburg, Gauteng",
+    courses: [
+      {
+        id: 6,
+        name: "Psychology",
+        minAps: 27,
+        faculty: "Social Sciences",
+        type: "Bachelor's Degree",
+        duration: "3 years"
+      }
+    ]
   }
+];
+
+const faculties = [
+  "Health Sciences",
+  "Computer Science",
+  "Education",
+  "Engineering",
+  "Commerce",
+  "Social Sciences"
 ];
 
 module.exports = {
   users,
-  courses
+  universities,
+  faculties
 };
