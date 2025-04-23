@@ -32,7 +32,7 @@ const universities = [
     courses: [
       {
         id: 2,
-        name: "Information Technology",
+        name: "IT",
         minAps: 28,
         faculty: "Computer Science",
         type: "Diploma",
@@ -60,7 +60,7 @@ const universities = [
     courses: [
       {
         id: 4,
-        name: "Mechanical Engineering",
+        name: "IT",
         minAps: 30,
         faculty: "Engineering",
         type: "Bachelor's Degree",
