@@ -4,6 +4,7 @@ const { universities } = require('../config/db.js'); // Make sure universities h
 const getCourses =  (req, res) => {
   const { aps, university, courseName } = req.body;
 
+  
   // Validate APS
   if (typeof aps !== 'number' || isNaN(aps)) {
     return res.status(400).json({ success: false, msg: 'APS must be a valid number.' });
