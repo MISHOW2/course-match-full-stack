@@ -30,7 +30,7 @@ const signUp = async (req, res) => {
 
 
     const token = jwt.sign(
-      { email }, "lskdjglsjgdslsdgs", { expiresIn: "1h" })
+      { email }, "hdfkhjdhkjdfjhdhdfh", { expiresIn: "1h" })
 
     res.status(201).json({
       msg: "User signed up successfully", token
@@ -52,7 +52,6 @@ const login = async (req, res) => {
     const isMatch = bcrypt.compare(password, user.password);
     if (!isMatch) return res.json({ success: false, msg: "invalid credentials" })
 
-
     // Generate JWT
     const token = jwt.sign(
       { email },
@@ -67,7 +66,5 @@ const login = async (req, res) => {
   }
 
 }
-
-
 
 module.exports = { signUp, login }
