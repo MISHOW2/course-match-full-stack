@@ -9,7 +9,6 @@ const getCourses =  (req, res) => {
   if (typeof aps !== 'number' || isNaN(aps)) {
     return res.status(400).json({ success: false, msg: 'APS must be a valid number.' });
   }
-+++++++ +++++++ +++++ +++++
   if (aps < 0 || aps > 48) {
     return res.status(400).json({ success: false, msg: 'APS must be between 0 and 48.' });
   }
